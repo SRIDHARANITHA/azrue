@@ -1,0 +1,19 @@
+{
+	"name": "DS_DELETE_COPY",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSGEN2_COPY",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "movies.csv",
+				"fileSystem": "source"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
