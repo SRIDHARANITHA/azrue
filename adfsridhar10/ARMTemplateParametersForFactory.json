@@ -25,6 +25,9 @@
 		},
 		"LS_ADLSGEN2_COPY_properties_typeProperties_url": {
 			"value": "https://adlsgen2sridharstorage.dfs.core.windows.net/"
+		},
+		"LS_RESTAPI_SOURCE_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/5yDVOt/data"
 		}
 	}
 }
