@@ -1,0 +1,15 @@
+{
+	"name": "DS_RESTAPI_SOURCE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_RESTAPI_SOURCE",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"base_url": "https://retoolapi.dev/5yDVOt/data"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
