@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "restapi",
+				"fileName": "lookup.csv",
+				"folderPath": "lookup",
 				"fileSystem": "sink"
 			},
 			"columnDelimiter": ",",
