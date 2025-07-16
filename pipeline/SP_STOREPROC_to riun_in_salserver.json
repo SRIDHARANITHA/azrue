@@ -33,7 +33,11 @@
 				},
 				"linkedServiceName": {
 					"referenceName": "DS_SQLSERVER_ONPREM",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"schema": "ctl",
+						"tabllename": "config"
+					}
 				}
 			}
 		],
