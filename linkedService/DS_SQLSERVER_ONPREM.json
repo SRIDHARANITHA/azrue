@@ -2,6 +2,14 @@
 	"name": "DS_SQLSERVER_ONPREM",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"tabllename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
@@ -11,7 +19,7 @@
 			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "chetan",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhYmY3NzJiNS1kZmQ3LTQ2NzEtODYwNS00ZmU4NjdhZGVhYzgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxZjBhNzY2MC05ODkyLTRjOGEtYWZlNi0zNzdlOWY0M2I5ZjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "irselfhosted",
