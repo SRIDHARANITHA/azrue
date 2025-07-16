@@ -201,10 +201,6 @@
 								"schema": {
 									"value": "@pipeline().parameters.schemaname",
 									"type": "Expression"
-								},
-								"tabllename": {
-									"value": "@pipeline().parameters.tablename",
-									"type": "Expression"
 								}
 							}
 						}
@@ -274,10 +270,6 @@
 							"parameters": {
 								"schema": {
 									"value": "@pipeline().parameters.schemaname",
-									"type": "Expression"
-								},
-								"tabllename": {
-									"value": "@pipeline().parameters.tablename",
 									"type": "Expression"
 								}
 							}
