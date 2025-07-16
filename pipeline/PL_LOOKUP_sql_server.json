@@ -1,5 +1,5 @@
 {
-	"name": "PL_LOOKUP",
+	"name": "PL_LOOKUP_sql_server",
 	"properties": {
 		"activities": [
 			{
