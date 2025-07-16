@@ -19,18 +19,28 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "LS_SQLSERVER_ONPREM",
-					"type": "LinkedServiceReference",
-					"parameters": {
-						"schema": "ctl",
-						"table": "config"
+					"type": "LinkedServiceReference"
+				},
+				"parameters": {
+					"schema": {
+						"type": "string"
+					},
+					"tablename": {
+						"type": "string"
 					}
 				},
 				"annotations": [],
 				"type": "SqlServerTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "ctl",
-					"table": "config"
+					"schema": {
+						"value": "@dataset().schema",
+						"type": "Expression"
+					},
+					"table": {
+						"value": "@dataset().tablename",
+						"type": "Expression"
+					}
 				}
 			},
 			"dependsOn": []
@@ -447,13 +457,30 @@
 							"dataset": {
 								"referenceName": "DS_SQLSERVER_ONPREM",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"schema": {
+										"value": "@pipeline().parameters.pipelineschema",
+										"type": "Expression"
+									},
+									"tablename": {
+										"value": "@pipeline().parameters.pipelinetablename",
+										"type": "Expression"
+									}
+								}
 							}
 						}
 					}
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"pipelineschema": {
+						"type": "string"
+					},
+					"pipelinetablename": {
+						"type": "string"
+					}
 				},
 				"annotations": []
 			},
