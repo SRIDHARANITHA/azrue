@@ -301,6 +301,16 @@
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"parameters": {
+					"schema": {
+						"type": "string",
+						"defaultValue": "ctl"
+					},
+					"tabllename": {
+						"type": "string",
+						"defaultValue": "config"
+					}
+				},
 				"annotations": [],
 				"type": "SqlServer",
 				"typeProperties": {
@@ -845,6 +855,60 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SP_STOREPROC_to riun_in_salserver')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Stored procedure1",
+						"type": "SqlServerStoredProcedure",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"storedProcedureName": "[[dbo].[InsertCustomer]",
+							"storedProcedureParameters": {
+								"CustomerID": {
+									"value": "503",
+									"type": "Int32"
+								},
+								"FirstName": {
+									"value": "sridhar",
+									"type": "String"
+								},
+								"LastName": {
+									"value": "prod",
+									"type": "String"
+								}
+							}
+						},
+						"linkedServiceName": {
+							"referenceName": "DS_SQLSERVER_ONPREM",
+							"type": "LinkedServiceReference",
+							"parameters": {
+								"schema": "ctl",
+								"tabllename": "config"
+							}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/DS_SQLSERVER_ONPREM')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SqlServerTable1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -888,56 +952,6 @@
 					"schema": "ctl",
 					"table": "config"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/DS_SQLSERVER_ONPREM')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SP_STOREPROC_to riun_in_salserver')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "Stored procedure1",
-						"type": "SqlServerStoredProcedure",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"storedProcedureName": "[[dbo].[InsertCustomer]",
-							"storedProcedureParameters": {
-								"CustomerID": {
-									"value": "503",
-									"type": "Int32"
-								},
-								"FirstName": {
-									"value": "sridhar",
-									"type": "String"
-								},
-								"LastName": {
-									"value": "prod",
-									"type": "String"
-								}
-							}
-						},
-						"linkedServiceName": {
-							"referenceName": "DS_SQLSERVER_ONPREM",
-							"type": "LinkedServiceReference"
-						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"annotations": []
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/DS_SQLSERVER_ONPREM')]"
