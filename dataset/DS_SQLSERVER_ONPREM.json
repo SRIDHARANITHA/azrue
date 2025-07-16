@@ -1,0 +1,20 @@
+{
+	"name": "DS_SQLSERVER_ONPREM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLSERVER_ONPREM",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"schema": "ctl",
+				"table": "config"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "ctl",
+			"table": "config"
+		}
+	}
+}
