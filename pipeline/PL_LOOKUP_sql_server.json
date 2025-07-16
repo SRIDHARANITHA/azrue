@@ -22,7 +22,17 @@
 					},
 					"dataset": {
 						"referenceName": "SqlServerTable1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": {
+								"value": "@pipeline().parameters.pipelineschema",
+								"type": "Expression"
+							},
+							"tablename": {
+								"value": "@pipeline().parameters.pipelinetablename",
+								"type": "Expression"
+							}
+						}
 					},
 					"firstRowOnly": false
 				}
@@ -49,10 +59,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": {
-							"value": "@activity('Lookup1').output.value[0].query",
-							"type": "Expression"
-						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -80,7 +86,17 @@
 				"inputs": [
 					{
 						"referenceName": "SqlServerTable1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": {
+								"value": "@pipeline().parameters.pipelineschema",
+								"type": "Expression"
+							},
+							"tablename": {
+								"value": "@pipeline().parameters.pipelinetablename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -91,6 +107,14 @@
 				]
 			}
 		],
+		"parameters": {
+			"pipelineschema": {
+				"type": "string"
+			},
+			"pipelinetablename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
