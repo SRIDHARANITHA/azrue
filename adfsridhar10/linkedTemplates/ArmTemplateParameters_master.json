@@ -14,6 +14,9 @@
 		"LS_LOG_connectionString": {
 			"value": ""
 		},
+		"LS_SQLSERVER_ONPREM_password": {
+			"value": ""
+		},
 		"DS_SQLSERVER_ONPREM_properties_typeProperties_server": {
 			"value": "SRIDHAR"
 		},
@@ -28,6 +31,15 @@
 		},
 		"LS_RESTAPI_SOURCE_properties_typeProperties_url": {
 			"value": "https://retoolapi.dev/5yDVOt/data"
+		},
+		"LS_SQLSERVER_ONPREM_properties_typeProperties_server": {
+			"value": "SRIDHAR"
+		},
+		"LS_SQLSERVER_ONPREM_properties_typeProperties_database": {
+			"value": "AdventureWorks2022"
+		},
+		"LS_SQLSERVER_ONPREM_properties_typeProperties_userName": {
+			"value": "chetan"
 		},
 		"containerUri": {
 			"value": ""
