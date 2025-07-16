@@ -21,7 +21,7 @@
 			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "chetan",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyODE3YWQ0MC1mZWNmLTRhYWQtOTEwMy1mMDQ0ZTBhNjFmOGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwYTg2ODMzMS1jZTBiLTRlMGEtYTIxYS0xNjU2ZGE2NWZkMjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "irselfhosted",
