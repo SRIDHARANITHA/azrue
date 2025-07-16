@@ -4,10 +4,12 @@
 	"properties": {
 		"parameters": {
 			"schema": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "ctl"
 			},
 			"tabllename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "config"
 			}
 		},
 		"annotations": [],
@@ -19,7 +21,7 @@
 			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "chetan",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxZjBhNzY2MC05ODkyLTRjOGEtYWZlNi0zNzdlOWY0M2I5ZjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyODE3YWQ0MC1mZWNmLTRhYWQtOTEwMy1mMDQ0ZTBhNjFmOGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "irselfhosted",
