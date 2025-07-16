@@ -22,11 +22,29 @@
 					},
 					"dataset": {
 						"referenceName": "DS_SQLSERVER_ONPREM",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": {
+								"value": "@pipeline().parameters.pipelineschema",
+								"type": "Expression"
+							},
+							"tablename": {
+								"value": "@pipeline().parameters.pipelinetablename",
+								"type": "Expression"
+							}
+						}
 					}
 				}
 			}
 		],
+		"parameters": {
+			"pipelineschema": {
+				"type": "string"
+			},
+			"pipelinetablename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

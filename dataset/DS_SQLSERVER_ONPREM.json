@@ -3,18 +3,28 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_SQLSERVER_ONPREM",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"schema": "ctl",
-				"table": "config"
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
 		"type": "SqlServerTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "ctl",
-			"table": "config"
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
 		}
 	}
 }
