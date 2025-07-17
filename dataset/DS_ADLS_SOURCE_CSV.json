@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "csv"
+				"fileName": "industry_sic.csv",
+				"fileSystem": "source"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
