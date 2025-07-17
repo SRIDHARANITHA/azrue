@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "PL_FOREACH_LOOKUP",
 	"properties": {
 		"activities": [
 			{
